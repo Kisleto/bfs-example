@@ -39,12 +39,11 @@ public class BFSExample {
         LinkedList<UserNode> queue = new LinkedList<>();
         Set<UserNode> friends = new HashSet<>();
 
-        // Mark the starting node as visited and enqueue it
         visited.add(startUser);
         queue.add(startUser);
 
-        while (!queue.isEmpty()) {     //while queue contains users
-            UserNode current = queue.poll();    //return and remove the head node from queue
+        while (!queue.isEmpty()) {
+            UserNode current = queue.poll();   
             if (!visited.contains(current) || current.equals(startUser)) {
                 for (UserNode friend : current.getFriends()) {
                     if (friend.getLevel() == 0) {

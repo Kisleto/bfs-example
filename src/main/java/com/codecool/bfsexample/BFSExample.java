@@ -21,7 +21,7 @@ public class BFSExample {
 
         //1st exercise
         GraphPlotter graphPlotter2 = new GraphPlotter(users);
-        UserNode startUser = users.get(25);
+        UserNode startUser = users.get(1);
         UserNode goalUser = users.get(35);
         Set<UserNode> friends = new HashSet<>();
         friends.add(startUser);
@@ -43,7 +43,7 @@ public class BFSExample {
         queue.add(startUser);
 
         while (!queue.isEmpty()) {
-            UserNode current = queue.poll();   
+            UserNode current = queue.poll();
             if (!visited.contains(current) || current.equals(startUser)) {
                 for (UserNode friend : current.getFriends()) {
                     if (friend.getLevel() == 0) {

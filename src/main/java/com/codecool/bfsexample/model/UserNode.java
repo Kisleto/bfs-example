@@ -17,7 +17,7 @@ public class UserNode {
 
     private Set<UserNode> friends = new HashSet<>();
 
-    private int level = 0;   //all user's level is initially 0
+    private int level = 0;
     private UserNode parentNode;
 
 
